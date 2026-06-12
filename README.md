@@ -1,8 +1,9 @@
 # C Playground
 
 A personal learning repository documenting my journey through the C programming
-language, one small program at a time. Every file here was written by hand while
-working through the fundamentals -- no copy-paste shortcuts, plenty of wolves.
+language, one small program at a time. Every solution here was written by hand
+while working through the fundamentals -- no copy-paste shortcuts, plenty of
+wolves.
 
 ## Repository layout
 
@@ -17,6 +18,15 @@ examples, and `exercises/` holds the practice tasks solved by hand. Files
 follow a simple convention: a two-digit number reflecting learning order,
 followed by a short kebab-case description, e.g. `03-scanf-input.c`.
 Compiled binaries are never committed.
+
+## AI assistance
+
+I drive the learning here, with [Claude Code](https://claude.com/claude-code)
+helping along the way: it drafts the lesson examples and exercise skeletons
+for each topic and reviews my finished solutions, pointing out bugs and
+explaining why they happen -- never fixing my code unless I ask. Solving the
+exercises, debugging them, and understanding why they work is my job: every
+solution in the `exercises/` directories is written by hand.
 
 ## Building and running
 
