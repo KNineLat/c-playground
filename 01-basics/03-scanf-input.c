@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main (void) {
+int main(void) {
     int wolves;
 
     printf("How many wolves do you see daily: ");
