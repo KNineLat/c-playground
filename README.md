@@ -7,20 +7,23 @@ working through the fundamentals -- no copy-paste shortcuts, plenty of wolves.
 ## Repository layout
 
 ```
-basics/                 Core lessons, numbered in learning order
-basics/exercises/       Practice exercises reinforcing each lesson
+01-basics/              One numbered folder per topic, in learning order
+02-conditionals/        ...next topics get the next number (03-loops/, ...)
+notes/                  Reference notes (data types, cheat sheets)
 ```
 
-Files follow a simple convention: a two-digit number reflecting the order in
-which they were written, followed by a short kebab-case description, e.g.
-`03-scanf-input.c`. Compiled binaries are never committed.
+Inside each topic folder, the top-level `.c` files are lessons and worked
+examples, and `exercises/` holds the practice tasks solved by hand. Files
+follow a simple convention: a two-digit number reflecting learning order,
+followed by a short kebab-case description, e.g. `03-scanf-input.c`.
+Compiled binaries are never committed.
 
 ## Building and running
 
 Each file is a standalone program. Compile any of them with:
 
 ```sh
-gcc -Wall -Wextra -std=c11 -o program basics/01-hello-world.c
+gcc -Wall -Wextra -std=c11 -o program 01-basics/01-hello-world.c
 ./program
 ```
 
