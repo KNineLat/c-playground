@@ -1,0 +1,15 @@
+# Compiled binaries and build artifacts
+*.o
+*.out
+*.exe
+a.out
+
+# Debug symbols
+*.dSYM/
+
+# Editor and IDE files
+.vscode/
+.idea/
+
+# Claude Code local config
+.claude/
