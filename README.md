@@ -27,7 +27,16 @@ gcc -Wall -Wextra -std=c11 -o program 01-basics/01-hello-world.c
 ./program
 ```
 
-All programs in this repository compile cleanly with `-Wall -Wextra`.
+All programs in this repository compile cleanly with `-Wall -Wextra`. To
+verify that promise for every file at once, run the check script from the
+repository root:
+
+```sh
+./check.sh
+```
+
+It compiles each `.c` file (discarding the binaries) and fails if any file
+produces an error or a warning.
 
 ## Milestones
 
