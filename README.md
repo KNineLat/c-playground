@@ -33,7 +33,7 @@ solution in the `exercises/` directories is written by hand.
 Each file is a standalone program. Compile any of them with:
 
 ```sh
-gcc -Wall -Wextra -std=c11 -o program 01-basics/01-hello-world.c
+clang -Wall -Wextra -o program 01-basics/01-hello-world.c
 ./program
 ```
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Compile every .c file in the repository with the project's warning flags
-# and report the result. A file passes only when gcc succeeds AND prints
+# and report the result. A file passes only when clang succeeds AND prints
 # no warnings, so this verifies the README's "compiles cleanly with
 # -Wall -Wextra" promise. Exits non-zero if anything needs attention.
 #
@@ -9,7 +9,7 @@
 
 set -u
 
-CFLAGS="-Wall -Wextra -std=c11"
+CFLAGS="-Wall -Wextra"
 checked=0
 failures=0
 
@@ -20,7 +20,7 @@ while IFS= read -r file; do
     checked=$((checked + 1))
     # -o /dev/null: do a full compile but throw the binary away,
     # so no build artifacts are ever left in the repo.
-    if output=$(gcc $CFLAGS -o /dev/null "$file" 2>&1); then
+    if output=$(clang $CFLAGS -o /dev/null "$file" 2>&1); then
         if [ -n "$output" ]; then
             printf 'WARN  %s\n%s\n' "$file" "$output"
             failures=$((failures + 1))
