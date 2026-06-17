@@ -9,7 +9,13 @@
 
 set -u
 
-CFLAGS="-Wall -Wextra -fsanitize=address,undefined -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2"
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
+CFLAGS="-Wall -Wextra -fcolor-diagnostics -fsanitize=address,undefined -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2"
 checked=0
 failures=0
 
@@ -22,21 +28,21 @@ while IFS= read -r file; do
     # so no build artifacts are ever left in the repo.
     if output=$(clang $CFLAGS -o /dev/null "$file" 2>&1); then
         if [ -n "$output" ]; then
-            printf 'WARN  %s\n%s\n' "$file" "$output"
+            printf "${YELLOW}WARN${RESET}  %s\n%s\n" "$file" "$output"
             failures=$((failures + 1))
         else
-            printf 'OK    %s\n' "$file"
+            printf "${GREEN}OK${RESET}    %s\n" "$file"
         fi
     else
-        printf 'FAIL  %s\n%s\n' "$file" "$output"
+        printf "${RED}FAIL${RESET}  %s\n%s\n" "$file" "$output"
         failures=$((failures + 1))
     fi
 done < <(find . -name '*.c' -not -path './.git/*' | sort)
 
 echo
 if [ "$failures" -eq 0 ]; then
-    echo "All $checked files compile cleanly."
+    printf "${GREEN}${BOLD}All $checked files compile cleanly.${RESET}\n"
 else
-    echo "$failures of $checked files need attention."
+    printf "${RED}${BOLD}$failures of $checked files need attention.${RESET}\n"
     exit 1
 fi
