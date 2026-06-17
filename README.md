@@ -19,14 +19,10 @@ follow a simple convention: a two-digit number reflecting learning order,
 followed by a short kebab-case description, e.g. `03-scanf-input.c`.
 Compiled binaries are never committed.
 
-## AI assistance
+## Tools
 
-I drive the learning here, with [Claude Code](https://claude.com/claude-code)
-helping along the way: it drafts the lesson examples and exercise skeletons
-for each topic and reviews my finished solutions, pointing out bugs and
-explaining why they happen -- never fixing my code unless I ask. Solving the
-exercises, debugging them, and understanding why they work is my job: every
-solution in the `exercises/` directories is written by hand.
+AI coding assistants help draft lesson examples and review solutions, but all
+exercise code is written by hand.
 
 ## Building and running
 
