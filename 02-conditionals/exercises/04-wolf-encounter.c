@@ -22,9 +22,16 @@ int main(void) {
     int distance;
 
     printf("How many wolves do you see: ");
-    scanf("%d", &wolves);
+    if (scanf("%d", &wolves) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
+
     printf("How far away are they (meters): ");
-    scanf("%d", &distance);
+    if (scanf("%d", &distance) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     if (wolves == 0) {
         printf("No wolves around. Enjoy the walk.\n");

@@ -7,10 +7,16 @@ int main(void) {
     int rectangle_perimeter;
 
     printf("Enter rectangle width: ");
-    scanf("%d", &rectangle_width);
+    if (scanf("%d", &rectangle_width) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     printf("Enter rectangle length: ");
-    scanf("%d", &rectangle_length);
+    if (scanf("%d", &rectangle_length) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     rectangle_area = rectangle_width * rectangle_length;
     rectangle_perimeter = rectangle_width * 2 + rectangle_length * 2;

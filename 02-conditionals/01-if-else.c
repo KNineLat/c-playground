@@ -14,7 +14,10 @@ int main(void) {
     int howls;
 
     printf("How many times did the wolves howl tonight: ");
-    scanf("%d", &howls);
+    if (scanf("%d", &howls) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     /* Simple if: the block runs only when the condition is true. */
     if (howls < 0) {

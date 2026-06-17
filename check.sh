@@ -9,7 +9,7 @@
 
 set -u
 
-CFLAGS="-Wall -Wextra"
+CFLAGS="-Wall -Wextra -fsanitize=address,undefined -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2"
 checked=0
 failures=0
 

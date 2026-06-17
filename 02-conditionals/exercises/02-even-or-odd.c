@@ -16,7 +16,10 @@ int main(void) {
     int number;
 
     printf("Enter an integer: ");
-    scanf("%d", &number);
+    if (scanf("%d", &number) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     if (number % 2 == 0) {
         printf("Number is even.\n");

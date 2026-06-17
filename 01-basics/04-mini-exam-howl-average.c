@@ -8,11 +8,20 @@ int main(void) {
     float average_howls_count;
 
     printf("How many times did you hear wolves howl the night before last: ");
-    scanf("%d", &first_day_howls);
+    if (scanf("%d", &first_day_howls) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
     printf("How many times did you hear wolves howl last night: ");
-    scanf("%d", &second_day_howls);
+    if (scanf("%d", &second_day_howls) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
     printf("How many times did you hear wolves howl tonight: ");
-    scanf("%d", &final_day_howls);
+    if (scanf("%d", &final_day_howls) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     total_howls = first_day_howls + second_day_howls + final_day_howls;
     average_howls_count = total_howls / 3.0f;

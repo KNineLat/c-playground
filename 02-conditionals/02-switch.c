@@ -12,7 +12,10 @@ int main(void) {
     int day;
 
     printf("Enter a day of the week (1-7): ");
-    scanf("%d", &day);
+    if (scanf("%d", &day) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     switch (day) {
         case 1:

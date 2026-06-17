@@ -23,11 +23,20 @@ int main(void) {
     float result;
 
     printf("First number: ");
-    scanf("%f", &first_number);
+    if (scanf("%f", &first_number) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
     printf("Second number: ");
-    scanf("%f", &second_number);
+    if (scanf("%f", &second_number) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
     printf("Operator (+ - * /): ");
-    scanf(" %c", &operator);
+    if (scanf(" %c", &operator) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     switch (operator) {
         case '+':

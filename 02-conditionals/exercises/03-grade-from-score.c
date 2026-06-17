@@ -20,7 +20,10 @@ int main(void) {
     int score;
 
     printf("Enter the test score (0-100): ");
-    scanf("%d", &score);
+    if (scanf("%d", &score) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     if (score > 100 || score < 0) {
         printf("Invalid score.\n");

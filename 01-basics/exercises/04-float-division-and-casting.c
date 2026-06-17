@@ -8,10 +8,16 @@ int main(void) {
     float fractional_part;
 
     printf("How many times did you hear wolves howl tonight: ");
-    scanf("%d", &total_howls);
+    if (scanf("%d", &total_howls) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     printf("How many wolves are in the pack: ");
-    scanf("%d", &wolves_in_pack);
+    if (scanf("%d", &wolves_in_pack) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     average_howls_per_wolf = (float)total_howls / wolves_in_pack;
     printf("On average one wolf howled %.2f times a night\n", average_howls_per_wolf);

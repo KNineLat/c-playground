@@ -8,7 +8,10 @@ int main(void) {
     printf("Welcome to the temperature converter!\n");
 
     printf("Enter temperature in °C: ");
-    scanf("%f", &temperature_in_celsius);
+    if (scanf("%f", &temperature_in_celsius) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     conversion_factor = 9/5.0f;
     temperature_in_fahrenheit = temperature_in_celsius * conversion_factor + 32.0f;

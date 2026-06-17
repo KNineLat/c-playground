@@ -12,13 +12,22 @@ int main(void) {
     printf("Welcome to the tip calculator!\n");
 
     printf("What's the food bill: ");
-    scanf("%f", &food_bill);
+    if (scanf("%f", &food_bill) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     printf("What tip percentage would you like to pay: ");
-    scanf("%d", &tip_percentage);
+    if (scanf("%d", &tip_percentage) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     printf("How many people were eating: ");
-    scanf("%d", &number_of_people);
+    if (scanf("%d", &number_of_people) != 1) {
+        printf("Data input is invalid\n");
+        return 1;
+    }
 
     tip_fraction = (float)tip_percentage / 100;
     tip_amount = food_bill * tip_fraction;

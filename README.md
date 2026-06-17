@@ -33,7 +33,7 @@ solution in the `exercises/` directories is written by hand.
 Each file is a standalone program. Compile any of them with:
 
 ```sh
-clang -Wall -Wextra -o program 01-basics/01-hello-world.c
+clang -Wall -Wextra -fsanitize=address,undefined -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -o program 01-basics/01-hello-world.c
 ./program
 ```
 
