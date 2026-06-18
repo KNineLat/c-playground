@@ -1,0 +1,3 @@
+steps:
+  - label: ":c:"
+    command: bash .buildkite/ci.sh
