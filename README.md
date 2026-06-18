@@ -33,6 +33,14 @@ clang -Wall -Wextra -fsanitize=address,undefined -fstack-protector-strong -O2 -D
 ./program
 ```
 
+To compile and run a single file in one step with those same flags, use the
+`run.sh` wrapper. It builds the file to a temporary binary, runs it, and
+removes the binary afterwards (any extra arguments are passed to the program):
+
+```sh
+./run.sh 01-basics/01-hello-world.c
+```
+
 All programs in this repository compile cleanly with `-Wall -Wextra`. To
 verify that promise for every file at once, run the check script from the
 repository root:
