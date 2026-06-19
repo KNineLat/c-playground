@@ -50,11 +50,11 @@ int main(void) {
     }
 
     if (player1 == player2) {
-        printf("It's a tie!");
+        printf("It's a tie!\n");
     } else if ((player1 == 'r' && player2 == 's') || (player1 == 's' && player2 == 'p') || (player1 == 'p' && player2 == 'r')) {
-        printf("Player 1 wins!");
+        printf("Player 1 wins!\n");
     } else {
-        printf("Player 2 wins!");
+        printf("Player 2 wins!\n");
     }
 
     return 0;

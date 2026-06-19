@@ -39,7 +39,7 @@ int main(void) {
         temp_number = temp_number / 10;
     }
 
-    printf("Sum of digits for number %d is equal to %d\n",number ,sum);
+    printf("Sum of digits for number %d is equal to %d\n", number, sum);
 
     return 0;
 }

@@ -1,6 +1,6 @@
 # C Playground
 
-[![Build status](https://badge.buildkite.com/325acd0f1d7a327764afeeee85b37ec209cb3e1a803333a410.svg)](https://buildkite.com/<org>/c-playground)
+[![Build status](https://badge.buildkite.com/325acd0f1d7a327764afeeee85b37ec209cb3e1a803333a410.svg)](https://buildkite.com/mateusz-1/c-playground)
 
 A personal learning repository documenting my journey through the C programming
 language, one small program at a time. Every solution here was written by hand
