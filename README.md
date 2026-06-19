@@ -11,7 +11,8 @@ wolves.
 
 ```
 01-basics/              One numbered folder per topic, in learning order
-02-conditionals/        ...next topics get the next number (03-loops/, ...)
+02-conditionals/        ...
+03-loops/               ...next topics get the next number (04-..., ...)
 notes/                  Reference notes (data types, cheat sheets)
 ```
 
@@ -75,10 +76,3 @@ produces an error or a warning.
 - [ ] Dynamic memory (`malloc`, `free`)
 - [ ] File input and output
 - [ ] A first multi-file project with a Makefile
-
-## Notes to self
-
-- Division of two integers truncates; cast one operand to `float` or use a
-  float literal (`3.0f`) when a fractional result matters.
-- `scanf` needs the address of the variable (`&x`), except for arrays.
-- `%.2f` controls how a value is printed, not how it is stored.
