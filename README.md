@@ -63,10 +63,10 @@ produces an error or a warning.
 - [x] Reading user input with `scanf`
 - [x] Integer vs. float division and explicit casting
 - [x] First self-contained mini exam passed (howl average)
+- [x] Conditional statements (`if`, `else`, `switch`)
 
 ### Ahead
 
-- [ ] Conditional statements (`if`, `else`, `switch`)
 - [ ] Loops (`while`, `for`, `do-while`)
 - [ ] Functions: declarations, parameters, return values
 - [ ] Arrays and strings
